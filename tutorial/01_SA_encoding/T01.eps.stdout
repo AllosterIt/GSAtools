@@ -1,0 +1,69 @@
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                      GROup of MAchos and Cynical Suckers
+
+                            :-)  VERSION 4.5.5  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                                :-)  xpm2ps  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -f   ./T01.lf.xpm  Input        X PixMap compatible matrix file
+ -f2      root2.xpm  Input, Opt.  X PixMap compatible matrix file
+ -di      01_ps.m2p  Input, Opt!, Lib. Input file for mat2ps
+ -do        out.m2p  Output, Opt. Input file for mat2ps
+  -o   ./T01.lf.eps  Output, Opt! Encapsulated PostScript (tm) file
+-xpm       root.xpm  Output, Opt. X PixMap compatible matrix file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    0       Set the nicelevel
+-[no]w       bool   no      View output .xvg, .xpm, .eps and .pdb files
+-[no]frame   bool   yes     Display frame, ticks, labels, title and legend
+-title       enum   top     Show title at: top, once, ylabel or none
+-[no]yonce   bool   no      Show y-label only once
+-legend      enum   none    Show legend: both, first, second or none
+-diag        enum   first   Diagonal: first, second or none
+-size        real   400     Horizontal size of the matrix in ps units
+-bx          real   0       Element x-size, overrides -size (also y-size when
+                            -by is not set)
+-by          real   0       Element y-size
+-rainbow     enum   no      Rainbow colors, convert white to: no, blue or red
+-gradient    vector 0 0 0   Re-scale colormap to a smooth gradient from white
+                            {1,1,1} to {r,g,b}
+-skip        int    1       only write out every nr-th row and column
+-[no]zeroline  bool no      insert line in .xpm matrix where axis label is
+                            zero
+-legoffset   int    0       Skip first N colors from .xpm file for the legend
+-combine     enum   halves  Combine two matrices: halves, add, sub, mult or
+                            div
+-cmin        real   0       Minimum for combination output
+-cmax        real   0       Maximum for combination output
+
+  0%  2%  4%  5%  7%  9% 10% 12% 14% 15% 17% 19% 20% 22% 23% 25% 27% 28% 30% 32% 33% 35% 37% 38% 40% 42% 43% 45% 47% 48% 50% 52% 53% 55% 57% 58% 60% 61% 63% 65% 66% 68% 70% 71% 73% 75% 76% 78% 80% 81% 83% 85% 86% 88% 90% 91% 93% 95% 96% 98%100%There is 1 matrix in ./T01.lf.xpm
+Matrix 0 is 101 x 121
+
+gcq#85: "We're Gonna Hit You Harder" (Scoter)
+
+Set the x-size of the box to 3.960
+Set the y-size of the box to 3.960

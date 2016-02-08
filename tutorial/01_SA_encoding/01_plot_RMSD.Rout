@@ -1,0 +1,99 @@
+
+R version 3.0.0 (2013-04-03) -- "Masked Marvel"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ######################################################################
+> #
+> #       R script to plot RMSD fitting data
+> #
+> #       
+> #       
+> #
+> #
+> ######################################################################
+> #
+> #       parameters
+> #
+> #       The script can easily be adapted to process user-provided data
+> #       by simply modifying the values of these parameters.
+> #
+> wSize = 1200
+> hSize = 800
+> inputFilename = "T01.lf_rmsd.xvg"
+> outputFilenamePrefix = "T01.lf_rmsd"
+> 
+> ######################################################################
+> #
+> #       load data
+> d = as.matrix(read.table(inputFilename, skip = 12), stringsAsFactors = F)
+> nFrag = 121
+> dim(d) = c(nFrag + 1,dim(d)[1]/(nFrag + 1))
+> # remove & character
+> d = d[c(1:nFrag),]
+> # convert to numbers
+> d = apply(d, c(1,2), as.double)
+> 
+> #       check graphical support
+> if(capabilities("png")){
++         png(file = paste(outputFilenamePrefix, ".png", sep = ''), width = wSize, height = hSize)
++         par(cex = 2)
++ }else{
++         if(capabilities("jpeg")){
++                 jpeg(file = paste(outputFilenamePrefix, ".jpeg", sep = ''), width = wSize, height = hSize)
++                 par(cex = 2)
++         }else{
++                 bmp(file = paste(outputFilenamePrefix, ".bmp", sep = ''), width = wSize, height = hSize)
++                 par(cex = 1.5)
++         }
++ }
+> 
+> 
+> #       plot data
+> par(las = 2)
+> boxplot(
++         t(d),
++         type = 'n',
++         xlab = 'Fragment',
++         ylab = expression(paste("RMSD / ", ring(A))),
++         xaxt = 'n',
++         yaxt = 'n',
++         outline = F,
++         col = 'grey90',
++         main = 'Local fit error (RMSD)'
++ )
+> abline(h = seq(0,max(d),0.1), lty = 2, col = 'grey')
+> abline(v = seq(5,(nFrag - 1),5), lty = 3, col = 'grey')
+> axis(2, seq(0,max(d),0.1))
+> axis(1, at = seq(5,(nFrag - 1),5), labels = seq(5,(nFrag - 1),5))
+> boxplot(
++         t(d),
++         outline = F,
++         col = 'grey90',
++         xaxt = 'n',
++         yaxt = 'n',
++         add = T
++ )
+> dev.off()
+null device 
+          1 
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  0.536   0.040   0.835 

@@ -1,0 +1,4 @@
+#!/bin/bash
+export GMXBASEDIR=@GMXDIR@
+export GMXLIB=$GMXBASEDIR/share/gromacs/top
+source $GMXBASEDIR/bin/GMXRC

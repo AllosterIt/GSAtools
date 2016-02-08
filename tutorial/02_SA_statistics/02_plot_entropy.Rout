@@ -1,0 +1,97 @@
+
+R version 3.0.0 (2013-04-03) -- "Masked Marvel"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ######################################################################
+> #
+> #       R script to plot entropy data
+> #
+> #
+> #
+> #
+> #
+> ######################################################################
+> #
+> #       parameters
+> #
+> #       The script can easily be adapted to process user-provided data
+> #       by simply modifying the values of these parameters.
+> #
+> wSize = 1200
+> hSize = 800
+> inputFilename = "T02.lf_entropy.xvg"
+> outputFilenamePrefix = "T02.lf_entropy"
+> 
+> ######################################################################
+> #
+> #       load data
+> d = as.matrix(read.table(inputFilename, skip = 12))
+> nFrag = dim(d)[1]
+> 
+> #       check graphical support
+> if(capabilities("png")){
++         png(file = paste(outputFilenamePrefix, ".png", sep = ''), width = wSize, height = hSize)
++         par(cex = 2)
++ }else{
++         if(capabilities("jpeg")){
++                 jpeg(file = paste(outputFilenamePrefix, ".jpeg", sep = ''), width = wSize, height = hSize)
++                 par(cex = 2)
++         }else{
++                 bmp(file = paste(outputFilenamePrefix, ".bmp", sep = ''), width = wSize, height = hSize)
++                 par(cex = 1.5)
++         }
++ }
+> 
+> 
+> #       plot data
+> par(las = 2)
+> plot(
++         d,
++         type = 'n',
++         xlab = 'Fragment',
++         ylab = 'H / bit',
++         xaxt = 'n',
++         yaxt = 'n',
++         ylim = c(0, log(25)/log(2)),
++         main = 'Shannon Entropy'
++ )
+> abline(h = seq(0,log(25)/log(2),0.25), lty = 3, col = 'grey')
+> abline(h = seq(0,log(25)/log(2),0.5), lty = 2, col = 'grey')
+> abline(v = seq(5,(nFrag - 1),5), lty = 3, col = 'grey')
+> axis(2, seq(0,log(25)/log(2),0.5))
+> axis(1, at = seq(5,(nFrag - 1),5), labels = seq(5,(nFrag - 1),5))
+> points(
++         d,
++         type = 'o',
++         pch = 16,
++         col = 'blue'
++ )
+> points(
++         d,
++         pch = 20,
++         col = 'red'
++ )
+> dev.off()
+null device 
+          1 
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  0.320   0.016   0.419 

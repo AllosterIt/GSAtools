@@ -1,0 +1,28 @@
+drawMIweb.py plugin
+-------------------
+This is a basic PyMol plugin to read a matrix containing values of a
+property calculated for all pairs of residues in a protein and visualize it
+as a network.
+
+Install
+-------
+To install the plugin, simply save the plugin file and load it into PyMol with
+the Plugin -> Install Plugin... menu item. Alternatively, the plugin can be
+installed by copying the file into the PYMOLPATH/module/pmg_tk/startup/ folder.
+
+Usage
+-----
+
+1. load your pdb structure in PyMol
+
+2. open the plugin window
+        Plugin -> drawMIweb
+
+3. click on the Update Cutoff Range button
+
+4. re-open the plugin window
+        Plugin -> drawMIweb
+
+5. select the prefered cutoff value and representation
+
+6. click the Show edges button

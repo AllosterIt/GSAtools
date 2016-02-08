@@ -1,0 +1,99 @@
+
+R version 3.0.0 (2013-04-03) -- "Masked Marvel"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> #####################################################################
+> #
+> #       R script to plot transition matrix
+> #
+> #
+> #
+> #
+> #
+> ######################################################################
+> #
+> #       parameters
+> #
+> #       The script can easily be adapted to process user-provided data
+> #       by simply modifying the values of these parameters.
+> #
+> nLetters = 25
+> wSize = 1600
+> hSize = 1600
+> labelCutoff = 0.01
+> inputFilename = "T03.lf_nMImat.out"
+> outputFilenamePrefix = "T03.lf_nMImat"
+> 
+> ######################################################################
+> #
+> #       load data
+> d = as.matrix(read.table(inputFilename))
+> nFrag = dim(d)[1]
+> dd = d
+> diag(dd) = 0
+> 
+> #       check graphical support
+> if(capabilities("png")){
++         png(file = paste(outputFilenamePrefix, ".png", sep = ''), width = wSize, height = hSize)
++         par(cex = 2.5)
++ }else{
++         if(capabilities("jpeg")){
++                 jpeg(file = paste(outputFilenamePrefix, ".jpeg", sep = ''), width = wSize, height = hSize)
++                 par(cex = 2.5)
++         }else{
++                 bmp(file = paste(outputFilenamePrefix, ".bmp", sep = ''), width = wSize, height = hSize)
++                 par(cex = 2.0)
++         }
++ }
+> 
+> #       plot data
+> par(mar = c(5.1, 4.1, 4.1, 6))
+> par(las = 2)
+> par(pty = 's')
+> par(xpd = TRUE)
+> image(
++         dd,
++         xaxt = 'n',
++         yaxt = 'n',
++         col = rgb(0,1,0,c(0:50)/50),
++         xlab = 'Fragment',
++         ylab = 'Fragment',
++         main = 'normalized MI matrix'
++ )
+Warning message:
+In image.default(dd, xaxt = "n", yaxt = "n", col = rgb(0, 1, 0,  :
+  semi-transparency is not supported on this device: reported only once per page
+> axis(1, at = seq(4,(nFrag - 1),5)/(nFrag - 1), labels = seq(5,nFrag,5))
+> axis(2, at = seq(4,(nFrag - 1),5)/(nFrag - 1), labels = seq(5,nFrag,5))
+> colvals = seq(0,max(dd),max(dd)/50)
+> collabs = format(colvals, digits = 1)
+> for(i in c(0:50)){
++     rect(1.05, i/50, 1.08, (i+1)/50, col = rgb(0,1,0,c(0:50)/50)[i])
++     text(1.11, (i+0.5)/50, collabs[i+1], cex = 0.8)
++ }
+> dev.off()
+null device 
+          1 
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  0.484   0.032   0.626 

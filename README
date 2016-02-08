@@ -1,0 +1,61 @@
+GSATools project
+----------------
+GSAtools is a set of programs that translate ensembles of protein conformations
+into alignments of structural strings using a Structural Alphabet (SA) and
+perform a wide range of statistical analyses. 
+
+References
+----------
+If you publish results produced with the GSATools or develop methods based on
+the GSATools code, please cite the following papers:
+
+Pandini A, Fornili A, Fraternali F, Kleinjung J.
+Detection of allosteric signal transmission by information-theoretic analysis of
+protein dynamics.
+FASEB J. 2012 26(2):868-81.
+doi: 10.1096/fj.11-190868.
+
+Pandini A, Fornili A, Kleinjung J.
+Structural alphabets derived from attractors in conformational space.
+BMC Bioinformatics 2010 11:97.
+doi: 10.1186/1471-2105-11-97.
+
+Install
+-------
+Please read the general 'INSTALL' instructions.
+
+Usage
+-----
+GSAtools has been integrated into the Gromacs environment and it uses the
+standard syntax of Gromacs analysis tools. Help info for each tool can be
+printed out using the --help flag, e.g.:
+
+g_sa_encode --help
+
+Please refer also to the examples provided in the Test suite and in the Tutorial
+included in this distribution.
+
+R scripts for the analysis and data visualisation are included in the Rscripts
+directory. All the scripts can be easily modified to process user-provided data
+by changing the parameters in the first section of the files.
+
+Availability
+------------
+The program is made available under the GNU Public License for academic
+scientific purposes and under the condition that proper acknowledgement
+is made to the authors of the program in publications resulting from the use
+of the program.
+
+License
+-------
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+

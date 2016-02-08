@@ -1,0 +1,69 @@
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                  Gromacs Runs On Most of All Computer Systems
+
+                            :-)  VERSION 4.5.5  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                        :-)  ../../src/g_sa_analyze  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+ -sa ./T00.lf_str.out  Input        Generic output file
+  -n  pos_index.ndx  Input, Opt.  Index file
+-fvalue  funval.xvg  Input, Opt.  xvgr/xmgr file
+  -H ./T02.lf_entropy.xvg  Output, Opt! xvgr/xmgr file
+-pro ./T02.lf_prof.dat  Output, Opt! Generic data file
+-trans/T02.lf_transmat.out  Output, Opt! Generic output file
+-xpmout      lf.xpm  Output, Opt. X PixMap compatible matrix file
+-MIxvg    lf_MI.xvg  Output, Opt. xvgr/xmgr file
+-MIlog    lf_MI.log  Output, Opt. Log file
+-MIout    lf_MI.out  Output, Opt. Generic output file
+-MImat lf_MImat.out  Output, Opt. Generic output file
+-eeMImat lf_eeMImat.out  Output, Opt. Generic output file
+-jHmat lf_jHmat.out  Output, Opt. Generic output file
+-nMImat  lf_nMImat.out  Output, Opt. Generic output file
+-ZMImat  lf_ZMImat.out  Output, Opt. Generic output file
+-meanMImat lf_meanMImat.out  Output, Opt. Generic output file
+-stdMImat lf_stdMImat.out  Output, Opt. Generic output file
+-pvalueMImat lf_pvalueMImat.out  Output, Opt. Generic output file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    0       Set the nicelevel
+-b           time   0       First frame (ps) to read from trajectory
+-e           time   0       Last frame (ps) to read from trajectory
+-dt          time   0       Only use frame when t MOD dt = first time (ps)
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-alphabet    enum   M32K25  Structural Alphabet: M32K25
+-[no]entropy bool   yes     Calculate entropy per position
+-[no]profile bool   yes     Calculate frequency profile
+-[no]trmat   bool   yes     Calculate transition matrix
+-[no]MImatrix  bool no      Calculate Mutual Information matrix
+-nSample     int    0       Number of random samples for significance
+                            estimation
+-[no]xpm     bool   no      Output xpm matrix
+-xvgcol      int    1       xvg column
+-bw          real   0.01    bin width for partition
+-[no]verbose bool   no      Verbose output
+
+Using M32K25 alphabet for encoding

@@ -1,0 +1,4 @@
+#!/bin/csh
+setenv GMXBASEDIR @GMXDIR@
+setenv GMXLIB $GMXBASEDIR/share/gromacs/top
+source $GMXBASEDIR/bin/GMXRC

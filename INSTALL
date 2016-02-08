@@ -1,0 +1,87 @@
+################################################################################
+#
+#       REQUIREMENTS
+#
+GSATools requires the following software: 
+- gromacs 4.5.x                 http://www.gromacs.org/Downloads
+- gsl                           http://www.gnu.org/software/gsl
+
+GROMACS should have been compiled as a set of shared libraries (--enable-shared)
+in serial mode, i.e. without using MPI. GSATools is currently not implemented
+to work with a parallel version of GROMACS. Future versions will include full
+compatibility.
+
+If you installed the GNU Scientific Library (GSL) for Linux using your
+distribution package manager, please check to have installed both gsl and 
+gsl-dev (or gsl-devel) packages.
+
+Additionally to perform the tutorial you may want to install the following
+software:
+- R                             http://www.r-project.org
+- igraph                        http://cran.r-project.org
+- qvalue                        http://www.bioconductor.org/packages/release/bioc/html/qvalue.html
+- bio3d                         http://thegrantlab.org/bio3d
+
+################################################################################
+#
+#       INSTALLATION
+#
+You need the location of your GROMACS installation (e.g. /usr/local/gromacs).
+You will have to set the GMXDIR variable to this value (see step 2).
+
+To compile GSATools follow these steps:
+
+1. untar the distribution package and change dir
+        tar xvfz gromacs_sa_tools-4.5.x-1.00.tar.gz
+        cd gromacs_sa_tools-4.5.x-1.00
+2. set the environment GMXDIR variable (use setenv if you have t/csh)
+        export GMXDIR=/usr/local/gromacs
+3. run the configure script
+        ./configure
+4. compile the software
+        make
+5. test the software (results are generated in the tests subdir)
+        make check
+
+If you decide to install the software, the default installation location
+is /usr/local (this can be changed at step 3 with the command
+./configure --prefix=<my-install-path>).
+6. 
+        make install
+
+Compiler flags and required libraries are checked automatically by configure.
+The program will tell you if something is missing. If your gsl libraries are
+installed in a non-standard path you can use the flag --with-gsl=<my-path-to-gsl>
+to specify the correct path. The configuration option --enable-debug creates 
+a debuggable binary. The option --enable-profiling enables profiling with GNU
+gprof. More details on additional options for configure are available with
+ ./configure --help
+
+################################################################################
+#
+#       REQUIRED ENVIRONMENTAL VARIABLES
+#
+Upon successful compilation, configuration scripts of the type 'GSATOOLSRC.*sh'
+are created for various shell types in the scripts directory. It is advisable 
+to run the script matching your terminal shell to set all required environment
+variables for correct execution of g_sa_encode and g_sa_analyze.
+
+If you have installed the software (see step 6 before) the configuration scripts
+will be copied to the install directory alongside with the binaries of the two 
+programs g_sa_encode and g_sa_analyze.
+
+################################################################################
+#
+#       MPI COMPILATION OPTION
+#
+The calculation of the MI matrix with g_sa_analyze can be considerably accelerated
+by using MPI. To compile GSATools using MPI you should enable it at step 3 of the
+installation:
+        configure --enable-mpi
+and if MPI is not installed in a default location:
+        configure --enable-mpi --with-mpi=<my-path-to-mpi>
+
+N.B.: Also in this case, the required GROMACS installation should have been 
+compiled in serial mode, i.e. without using MPI. GSATools is currently not 
+implemented to work with a parallel version of GROMACS. Future versions will
+include full compatibility.

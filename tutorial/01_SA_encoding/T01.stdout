@@ -1,0 +1,72 @@
+                         :-)  G  R  O  M  A  C  S  (-:
+
+                      GROup of MAchos and Cynical Suckers
+
+                            :-)  VERSION 4.5.5  (-:
+
+        Written by Emile Apol, Rossen Apostolov, Herman J.C. Berendsen,
+      Aldert van Buuren, Pär Bjelkmar, Rudi van Drunen, Anton Feenstra, 
+        Gerrit Groenhof, Peter Kasson, Per Larsson, Pieter Meulenhoff, 
+           Teemu Murtola, Szilard Pall, Sander Pronk, Roland Schulz, 
+                Michael Shirts, Alfons Sijbers, Peter Tieleman,
+
+               Berk Hess, David van der Spoel, and Erik Lindahl.
+
+       Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+            Copyright (c) 2001-2010, The GROMACS development team at
+        Uppsala University & The Royal Institute of Technology, Sweden.
+            check out http://www.gromacs.org for more information.
+
+         This program is free software; you can redistribute it and/or
+          modify it under the terms of the GNU General Public License
+         as published by the Free Software Foundation; either version 2
+             of the License, or (at your option) any later version.
+
+                        :-)  ../../src/g_sa_encode  (-:
+
+Option     Filename  Type         Description
+------------------------------------------------------------
+  -s ../00_input_data/T00.tpr  Input        Structure+mass(db): tpr tpb tpa
+                                   gro g96 pdb
+  -f ../00_input_data/T00.xtc  Input        Trajectory: xtc trr trj gro g96
+                                   pdb cpt
+-rmsdlf ./T01.lf_rmsd.xvg  Output, Opt! xvgr/xmgr file
+-strlf ./T01.lf_str.out  Output       Generic output file
+-xpmlf ./T01.lf.xpm  Output, Opt! X PixMap compatible matrix file
+-Hlf lf_entropy.xvg  Output, Opt. xvgr/xmgr file
+-prolf  lf_prof.dat  Output, Opt. Generic data file
+-rmsdgf gf_rmsd.xvg  Output, Opt. xvgr/xmgr file
+-strgf   gf_str.out  Output, Opt. Generic output file
+-xpmgf       gf.xpm  Output, Opt. X PixMap compatible matrix file
+-Hgf gf_entropy.xvg  Output, Opt. xvgr/xmgr file
+-progf  gf_prof.dat  Output, Opt. Generic data file
+-pdbgf       gf.pdb  Output, Opt. Protein data bank file
+-log      ./T01.log  Output, Opt! Log file
+
+Option       Type   Value   Description
+------------------------------------------------------
+-[no]h       bool   no      Print help info and quit
+-[no]version bool   no      Print version info and quit
+-nice        int    0       Set the nicelevel
+-b           time   0       First frame (ps) to read from trajectory
+-e           time   0       Last frame (ps) to read from trajectory
+-dt          time   0       Only use frame when t MOD dt = first time (ps)
+-xvg         enum   xmgrace  xvg plot formatting: xmgrace, xmgr or none
+-alphabet    enum   M32K25  Structural Alphabet: M32K25
+-heapsize    int    1000    Number of paths to grow in global fit mode
+-[no]fasta   bool   yes     Generate also fasta output
+-[no]global  bool   no      Perform also global fit encoding
+-[no]entropy bool   no      Calculate entropy per position
+-[no]profile bool   no      Calculate frequency profile
+-[no]xpm     bool   yes     Output xpm matrix
+-[no]verbose bool   no      Verbose output
+
+Using M32K25 alphabet for encoding
+Reading file ../00_input_data/T00.tpr, VERSION 4.0 (single precision)
+Reading file ../00_input_data/T00.tpr, VERSION 4.0 (single precision)
+Reading frame       0 time    0.000   
+Reading frame       1 time    1.000   Reading frame       2 time    2.000   Reading frame       3 time    3.000   Reading frame       4 time    4.000   Reading frame       5 time    5.000   Reading frame       6 time    6.000   Reading frame       7 time    7.000   Reading frame       8 time    8.000   Reading frame       9 time    9.000   Reading frame      10 time   10.000   Reading frame      11 time   11.000   Reading frame      12 time   12.000   Reading frame      13 time   13.000   Reading frame      14 time   14.000   Reading frame      15 time   15.000   Reading frame      16 time   16.000   Reading frame      17 time   17.000   Reading frame      18 time   18.000   Reading frame      19 time   19.000   Reading frame      20 time   20.000   Reading frame      30 time   30.000   Reading frame      40 time   40.000   Reading frame      50 time   50.000   Reading frame      60 time   60.000   Reading frame      70 time   70.000   Reading frame      80 time   80.000   Reading frame      90 time   90.000   Reading frame     100 time  100.000   Last frame        100 time  100.000   
+
+gcq#85: "We're Gonna Hit You Harder" (Scoter)
+
+  0%  2%  4%  5%  7%  9% 10% 12% 14% 15% 17% 19% 20% 22% 23% 25% 27% 28% 30% 32% 33% 35% 37% 38% 40% 42% 43% 45% 47% 48% 50% 52% 53% 55% 57% 58% 60% 61% 63% 65% 66% 68% 70% 71% 73% 75% 76% 78% 80% 81% 83% 85% 86% 88% 90% 91% 93% 95% 96% 98%100%
