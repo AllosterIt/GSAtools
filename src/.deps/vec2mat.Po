@@ -1,6 +1,0 @@
-vec2mat.o: structure/vec2mat.c structure/vec2mat.h \
- structure/pdb_structure.h
-
-structure/vec2mat.h:
-
-structure/pdb_structure.h:
