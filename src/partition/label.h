@@ -19,7 +19,7 @@
  *
  */
 
-#if !defined LABEL_H
+#ifndef LABEL_H
 #define LABEL_H
 
 #include <stdio.h>

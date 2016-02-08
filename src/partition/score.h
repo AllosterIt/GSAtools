@@ -42,7 +42,7 @@ typedef struct {
 
 /*____________________________________________________________________________*/
 /* prototypes */
-//float max(float a, float b);
+float max(float a, float b);
 float objectCost_wrapper(Collection *collection, int i, int score_idx);
 float partitionCost_wrapper(Collection *collection, int i, int x,
                             int score_idx);

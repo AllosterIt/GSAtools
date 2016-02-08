@@ -19,7 +19,7 @@
  *
  */
 
-#if !defined PARTITION_H
+#ifndef PARTITION_H
 #define PARTITION_H
 
 #include <float.h>

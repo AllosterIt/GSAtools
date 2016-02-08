@@ -19,15 +19,15 @@
  *
  */
 
-#include "statutil.h"
-#include "typedefs.h"
-#include "smalloc.h"
-#include "vec.h"
-#include "copyrite.h"
-#include "pdbio.h"
-#include "xvgr.h"
-#include "tpxio.h"
-#include "matio.h"
+//#include "statutil.h"
+#include "legacyheaders/typedefs.h"
+#include "utility/smalloc.h"
+#include "includeheaders/vec.h"
+//#include "copyrite.h"
+#include "fileio/pdbio.h"
+#include "legacyheaders/xvgr.h"
+#include "fileio/tpxio.h"
+#include "fileio/matio.h"
 #include "float.h"
 
 #include <time.h>
@@ -44,6 +44,7 @@
 #include "structure/fragment_colour.h"
 #include "structure/pdb_structure.h"
 #include "structure/transform_segment.h"
+#include "includeheaders/statutil.h"
 
 /*____________________________________________________________________________*/
 /* global variables */
@@ -786,7 +787,7 @@ int main(int argc,char *argv[])
 
     /*________________________________________________________________________*/
     /* Print (C) */
-    CopyRight(stderr,argv[0]);
+    //CopyRight(stderr,argv[0]);
 
     /*________________________________________________________________________*/
     /* Parse args */
@@ -832,19 +833,16 @@ int main(int argc,char *argv[])
 
     /*________________________________________________________________________*/
     /* calculate per position entropy */
-	if (my_rank == 0) fprintf(stdout, "Entropy per position\n");
     if (entropy)
         entropy_per_position(opt2fn("-H", asize(fnm), fnm), sequenceLength, &inputSequenceSet, oenv);
 
     /*________________________________________________________________________*/
     /* calculate profile */
-	if (my_rank == 0) fprintf(stdout, "Profile\n");
     if (profile)
         calculate_profile(opt2fn("-pro", asize(fnm), fnm), sequenceLength, &inputSequenceSet, fragment_set, xpmoutput);
 
     /*________________________________________________________________________*/
     /* calculate transition matrix */
-	if (my_rank == 0) fprintf(stdout, "Transition matrix\n");
     if (transmat) {
 
         /*________________________________________________________________________*/
@@ -889,6 +887,7 @@ int main(int argc,char *argv[])
 
     /*________________________________________________________________________*/
     /* print xpm map of encoding */
+
     SA_colour_set = load_colour_set(&nColourSets);
 
     if (xpmoutput) {
@@ -926,6 +925,7 @@ int main(int argc,char *argv[])
                     outxvgdata[1] = safe_malloc(sizeof(real) * nx);
                     outxvgdata[2] = safe_malloc(sizeof(real) * nx);
                     outxvgdata[3] = safe_malloc(sizeof(real) * nx);
+
 
                     /* read index file if provided */
                     bIndex = ftp2bSet(efNDX,NFILE,fnm);
@@ -1102,27 +1102,8 @@ int main(int argc,char *argv[])
 
         /*________________________________________________________________________*/
         /** calculate Mutual Information and Joint entropy */
-		int zz;
-		int completion_i = 0;
-		double completion;
-
-		MPI_Barrier(MPI_COMM_WORLD);
-
-		if (my_rank == 0) fprintf(stdout, "\nMutual Information and Joint Entropy\n");
-		fflush(stdout);
-        for(i = 0, zz = 0, completion_i = 0; i < sequenceLength; ++i) {
+        for(i = 0; i < sequenceLength; ++i) {
             for(j = i; j < sequenceLength; ++j) {
-			   /* print progress */
-				++ zz; 
-				completion = (long double)zz / ((long double)(sequenceLength*(sequenceLength-1)) / 2) * 100;
-				if ((int)completion > completion_i) {
-					completion_i = (int)completion;
-					if (my_rank == 0) {
-						fprintf(stdout, "\t%3d%%\r", completion_i);
-						fflush(stdout);
-					}
-				}
-
                 MIMat[i][j] = column_mutual_information(&inputSequenceSet, &probMat, i, j, &eeMI);
                 eeMIMat[i][j] = eeMI;
                 if (i != j) {
@@ -1138,6 +1119,7 @@ int main(int argc,char *argv[])
                     JentropyMat[j][i] = JentropyMat[i][j];
             }
         }
+
 
         /*________________________________________________________________________*/
         /** output Mutual Information matrices */
@@ -1193,8 +1175,6 @@ int main(int argc,char *argv[])
 
         /*________________________________________________________________________*/
         /** perform significance analysis */
-		if (my_rank == 0) fprintf(stdout, "\nSignificance analysis\n");
-		fflush(stdout);
         if (nSurrogates > 0) {
             /*________________________________________________________________________*/
             /** initialize random number generator */
@@ -1218,19 +1198,8 @@ int main(int argc,char *argv[])
 
             /*____________________________________________________________________*/
             /** calculate Mutual Information surrogate matrices */
-			MPI_Barrier(MPI_COMM_WORLD);
-
-            for(i = 0, zz = 0, completion_i = 0; i < sequenceLength; ++i) {
+            for(i = 0; i < sequenceLength; ++i) {
                 for(j = i; j < sequenceLength; ++j) {
-				   /* print progress */
-					++ zz; 
-					completion = (long double)zz * nodes / ((long double)(sequenceLength*(sequenceLength-1)) / 2) * 100;
-					if ((int)completion > completion_i) {
-						completion_i = (int)completion;
-						fprintf(stdout, "\t%3d%%\r", completion_i);
-						fflush(stdout);
-					}
-
                     random_column_mutual_information(&meanMI, &stdMI, &pValueMI, MIMat[i][j], &inputSequenceSet, &probMat, i, j, nSurrogates, rndGenerator);
                     meanMIMat[i][j] = meanMI;
                     stdMIMat[i][j] = stdMI;

@@ -35,7 +35,7 @@
  *
  */
 
-#if !defined QUATRMSD_H
+#ifndef QUATRMSD_H
 #define QUATRMSD_H 
 
 #include <stdlib.h>

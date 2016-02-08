@@ -1,5 +1,4 @@
 /*
- *     $Id: g_sa_encode.c 1418 2013-04-23 16:33:35Z apandini $
  *     Copyright (C) 2011-2013 Alessandro Pandini
  *
  *     This file is part of GSATools.
@@ -19,15 +18,19 @@
  *
  */
 
-#include "statutil.h"
-#include "typedefs.h"
-#include "smalloc.h"
-#include "vec.h"
-#include "copyrite.h"
-#include "pdbio.h"
-#include "tpxio.h"
-#include "xvgr.h"
-#include "matio.h"
+/** modified for Gromacs 5.0 **/
+//#include "statutil.h"
+#include "fileio/trxio.h"
+#include "legacyheaders/typedefs.h"
+#include "utility/smalloc.h"
+#include "legacyheaders/vec.h"
+#include "legacyheaders/copyrite.h"
+#include "fileio/pdbio.h"
+#include "fileio/tpxio.h"
+#include "legacyheaders/xvgr.h"
+#include "fileio/matio.h"
+#include "commandline/pargs.h"
+#include "includeheaders/types/simple.h"
 
 #include "general/safe.h"
 #include "sequence/encode.h"
@@ -38,12 +41,22 @@
 #include "structure/fragment_colour.h"
 #include "structure/pdb_structure.h"
 #include "structure/transform_segment.h"
+#include "legacyheaders/typedefs.h"
+#include "legacyheaders/macros.h"
 
 /*____________________________________________________________________________*/
 /* Warning cutoff for C-alpha - C-alpha distance */
 /* float CADistCutoff = 4.1; */
 float CADistCutoff = 6.0;
 
+/*____________________________________________________________________________*/
+/** max of two float  */
+/*
+float max(float a, float b)
+{
+    return( (a > b) ? a : b );
+}
+*/
 /*____________________________________________________________________________*/
 /** encode structure */
 void encode_structure(FragmentSet *fragment_set, Str *fragment_str,
@@ -704,9 +717,9 @@ int main(int argc,char *argv[])
 	    		logFile, heapsize, fasta, globalfit, verbose, entropy, xpmoutput,
 	    		&fastaIndex, &localfastaSequenceSet, &globalfastaSequenceSet, &chainBreak);
         fprintf(rmsdlocalFile, "&\n");
-    }while(read_next_frame(oenv,status,&fr));
+    } while(read_next_frame(oenv,status,&fr));
 
-    thanx(stderr);
+    //thanx(stderr);
 
     /* sequence length */
    	sequenceLength = localfastaSequenceSet.sequence[0].length;

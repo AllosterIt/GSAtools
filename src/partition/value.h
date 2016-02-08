@@ -19,7 +19,7 @@
  *
  */
 
-#if !defined VALUES_H
+#ifndef VALUES_H
 #define VALUES_H
 
 #include <stdio.h>

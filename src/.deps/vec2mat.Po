@@ -1,7 +1,5 @@
-vec2mat.o: structure/vec2mat.c /usr/include/stdc-predef.h \
- structure/vec2mat.h structure/pdb_structure.h
-
-/usr/include/stdc-predef.h:
+vec2mat.o: structure/vec2mat.c structure/vec2mat.h \
+ structure/pdb_structure.h
 
 structure/vec2mat.h:
 

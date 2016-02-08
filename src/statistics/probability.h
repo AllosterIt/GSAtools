@@ -56,7 +56,7 @@ float Shannon(Set *codeSet);
 void initialize_probability_matrix(ProbMatrix *probMat, Set *codeSet,
                                    Set *altCodeSet);
 void free_probability_matrix(ProbMatrix *probMat);
-__inline__ float mutual_information(ProbMatrix *probMat, Set *codeSet, Set *altCodeSet);
+float mutual_information(ProbMatrix *probMat, Set *codeSet, Set *altCodeSet);
 float joint_entropy(ProbMatrix *probMat, Set *codeSet, Set *altCodeSet);
 
 #endif /* PROBABILITY_H_ */

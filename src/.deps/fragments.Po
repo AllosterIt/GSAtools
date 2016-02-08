@@ -1,14 +1,15 @@
-fragments.o: structure/fragments.c /usr/include/stdc-predef.h \
- structure/fragments.h /usr/include/stdio.h /usr/include/features.h \
+fragments.o: structure/fragments.c structure/fragments.h \
+ /usr/include/stdio.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
  /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h \
@@ -17,7 +18,6 @@ fragments.o: structure/fragments.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
@@ -26,13 +26,12 @@ fragments.o: structure/fragments.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/string.h \
  /usr/include/xlocale.h /usr/include/x86_64-linux-gnu/bits/string.h \
  /usr/include/x86_64-linux-gnu/bits/string2.h \
- /usr/include/x86_64-linux-gnu/bits/string3.h /usr/include/gsl/gsl_math.h \
- /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ /usr/local/include/gsl/gsl_math.h /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_val.h \
  /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
  /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
  /usr/include/x86_64-linux-gnu/bits/inf.h \
@@ -40,25 +39,24 @@ fragments.o: structure/fragments.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/mathdef.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
- /usr/include/gsl/gsl_sys.h /usr/include/gsl/gsl_inline.h \
- /usr/include/gsl/gsl_machine.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h \
+ /usr/local/include/gsl/gsl_sys.h /usr/local/include/gsl/gsl_inline.h \
+ /usr/local/include/gsl/gsl_machine.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h \
- /usr/include/gsl/gsl_precision.h /usr/include/gsl/gsl_types.h \
- /usr/include/gsl/gsl_nan.h /usr/include/gsl/gsl_pow_int.h \
- /usr/include/gsl/gsl_minmax.h structure/pdb_structure.h \
- structure/quatRMSD.h structure/vec2mat.h structure/../general/matrix.h \
- structure/../general/safe.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/assert.h \
- /usr/include/ctype.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/sysstuff.h \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include/float.h \
+ /usr/local/include/gsl/gsl_precision.h \
+ /usr/local/include/gsl/gsl_types.h /usr/local/include/gsl/gsl_nan.h \
+ /usr/local/include/gsl/gsl_pow_int.h /usr/local/include/gsl/gsl_minmax.h \
+ structure/pdb_structure.h structure/quatRMSD.h structure/vec2mat.h \
+ structure/../general/matrix.h structure/../general/safe.h \
+ /mb/apps/gromacs-4.5.5/include/gromacs/assert.h /usr/include/ctype.h \
+ /mb/apps/gromacs-4.5.5/include/gromacs/sysstuff.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/signal.h /usr/include/x86_64-linux-gnu/bits/signum.h \
  /usr/include/x86_64-linux-gnu/bits/siginfo.h \
@@ -73,13 +71,13 @@ fragments.o: structure/fragments.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h structure/../general/safe.h \
  structure/fragments_coords.h structure/getfragments.h
 
-/usr/include/stdc-predef.h:
-
 structure/fragments.h:
 
 /usr/include/stdio.h:
 
 /usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/bits/predefs.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -89,7 +87,7 @@ structure/fragments.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.6/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -101,7 +99,7 @@ structure/fragments.h:
 
 /usr/include/wchar.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -123,8 +121,6 @@ structure/fragments.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
-
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/time.h:
@@ -145,10 +141,6 @@ structure/fragments.h:
 
 /usr/include/alloca.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/include/string.h:
@@ -161,7 +153,7 @@ structure/fragments.h:
 
 /usr/include/x86_64-linux-gnu/bits/string3.h:
 
-/usr/include/gsl/gsl_math.h:
+/usr/local/include/gsl/gsl_math.h:
 
 /usr/include/math.h:
 
@@ -181,15 +173,15 @@ structure/fragments.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
-/usr/include/gsl/gsl_sys.h:
+/usr/local/include/gsl/gsl_sys.h:
 
-/usr/include/gsl/gsl_inline.h:
+/usr/local/include/gsl/gsl_inline.h:
 
-/usr/include/gsl/gsl_machine.h:
+/usr/local/include/gsl/gsl_machine.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/limits.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
@@ -201,17 +193,17 @@ structure/fragments.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.6/include/float.h:
 
-/usr/include/gsl/gsl_precision.h:
+/usr/local/include/gsl/gsl_precision.h:
 
-/usr/include/gsl/gsl_types.h:
+/usr/local/include/gsl/gsl_types.h:
 
-/usr/include/gsl/gsl_nan.h:
+/usr/local/include/gsl/gsl_nan.h:
 
-/usr/include/gsl/gsl_pow_int.h:
+/usr/local/include/gsl/gsl_pow_int.h:
 
-/usr/include/gsl/gsl_minmax.h:
+/usr/local/include/gsl/gsl_minmax.h:
 
 structure/pdb_structure.h:
 
@@ -223,11 +215,11 @@ structure/../general/matrix.h:
 
 structure/../general/safe.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/assert.h:
+/mb/apps/gromacs-4.5.5/include/gromacs/assert.h:
 
 /usr/include/ctype.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/sysstuff.h:
+/mb/apps/gromacs-4.5.5/include/gromacs/sysstuff.h:
 
 /usr/include/errno.h:
 

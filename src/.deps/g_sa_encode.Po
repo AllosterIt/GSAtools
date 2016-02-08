@@ -1,22 +1,15 @@
 g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/statutil.h \
- /usr/include/stdio.h /usr/include/features.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/trxio.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/typedefs.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
- /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/typedefs.h \
- /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/time.h \
- /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
  /usr/include/x86_64-linux-gnu/sys/select.h \
@@ -26,12 +19,18 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/select2.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/sysstuff.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/sysstuff.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/stdio.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/errno.h \
  /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
@@ -41,113 +40,88 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
- /usr/include/x86_64-linux-gnu/bits/sigthread.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h /usr/include/xlocale.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/simple.h \
- ../config.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/enums.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/block.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/idef.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/simple.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/symtab.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/idef.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/atoms.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/trx.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/atoms.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../molfile_plugin.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../vmdplugin.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../vmdio.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../molfile_plugin.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../types/simple.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/topology.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/block.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/symtab.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/energy.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/inputrec.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../sysstuff.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/ishift.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/graph.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nrnb.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nblist.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nsgrid.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/commrec.h \
- /usr/lib/openmpi/include/mpi.h \
- /usr/lib/openmpi/include/mpi_portable_platform.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/forcerec.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/ns.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nsgrid.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nblist.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/genborn.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/qmmmrec.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/fcdata.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/commrec.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/mdatom.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/pbc.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/ifunc.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../typedefs.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/filenm.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/group.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/state.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/shellfc.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/constr.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/matrix.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/oenv.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/globsig.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nlistheuristics.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/iteratedconstraints.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/filenm.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/futil.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/readinp.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/warninp.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/wman.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/pdbio.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/symtab.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/atomprop.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/index.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/oenv.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/gmxfio.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/xdrf.h \
- /usr/include/rpc/rpc.h /usr/include/rpc/types.h \
- /usr/include/x86_64-linux-gnu/sys/time.h \
- /usr/include/x86_64-linux-gnu/sys/param.h \
- /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
- /usr/include/x86_64-linux-gnu/asm/param.h \
- /usr/include/asm-generic/param.h /usr/include/netinet/in.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/simple.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/sys/socket.h \
- /usr/include/x86_64-linux-gnu/sys/uio.h \
- /usr/include/x86_64-linux-gnu/bits/uio.h \
- /usr/include/x86_64-linux-gnu/bits/socket.h \
- /usr/include/x86_64-linux-gnu/bits/socket_type.h \
- /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
- /usr/include/x86_64-linux-gnu/asm/socket.h \
- /usr/include/asm-generic/socket.h \
- /usr/include/x86_64-linux-gnu/asm/sockios.h \
- /usr/include/asm-generic/sockios.h \
- /usr/include/x86_64-linux-gnu/bits/socket2.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/rpc/xdr.h \
- /usr/include/rpc/auth.h /usr/include/rpc/clnt.h \
- /usr/include/x86_64-linux-gnu/sys/un.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/inttypes.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/enums.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/block.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/idef.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/simple.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/symtab.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/idef.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/atoms.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/../fileio/trx.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/../fileio/../legacyheaders/types/atoms.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/topology.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/atoms.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/block.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/symtab.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/energy.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/inputrec.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/enums.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/../sysstuff.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/../../swap/enums.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/ishift.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/graph.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nrnb.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nblist.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nbnxn_pairlist.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nblist.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nsgrid.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/forcerec.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/ns.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nsgrid.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/genborn.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/qmmmrec.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nb_verlet.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nbnxn_pairlist.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nbnxn_cuda_types_ext.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/interaction_const.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/hw_info.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/../gmx_cpuid.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/fcdata.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/mdatom.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/pbc.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/ifunc.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/mdatom.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/fcdata.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/graph.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/pbc.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/group.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/state.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/shellfc.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/constr.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/matrix.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/oenv.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/filenm.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/readinp.h \
+ /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string.h \
  /usr/include/x86_64-linux-gnu/bits/string2.h \
- /usr/include/x86_64-linux-gnu/bits/string3.h /usr/include/rpc/rpc_msg.h \
- /usr/include/rpc/auth_unix.h /usr/include/rpc/auth_des.h \
- /usr/include/rpc/svc.h /usr/include/rpc/svc_auth.h \
- /usr/include/rpc/netdb.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/typedefs.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/smalloc.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/vec.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/maths.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/typedefs.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/warninp.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/pdbio.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/sysstuff.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/symtab.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/atomprop.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/index.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/oenv.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/gmxfio.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/futil.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../utility/gmx_header_config.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/../utility/gmx_header_config_gen.h \
+ legacyheaders/typedefs.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/utility/smalloc.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/vec.h ../config.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/types/simple.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/../math/utilities.h \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
  /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
  /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
@@ -156,46 +130,58 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/mathdef.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathinline.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/macros.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/gmx_fatal.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/mpelogging.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/physics.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/copyrite.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/pdbio.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/tpxio.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/xvgr.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/viewit.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/matio.h general/safe.h \
- /home/jkleinj/apps/gromacs-4.5.5/include/gromacs/assert.h \
- /usr/include/ctype.h sequence/encode.h sequence/../general/safe.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/../math/../legacyheaders/types/simple.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/typedefs.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/sysstuff.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/gmx_fatal.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/physics.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/copyrite.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/pdbio.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/tpxio.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/xvgr.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/viewit.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/../fileio/filenm.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/fileio/matio.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/commandline/pargs.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/commandline/../legacyheaders/types/simple.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/commandline/../legacyheaders/oenv.h \
+ /mb/apps/gromacs-5.0.2/include/gromacs/commandline/../fileio/filenm.h \
+ includeheaders/types/simple.h general/safe.h /usr/include/assert.h \
+ sequence/encode.h sequence/../general/safe.h \
  sequence/../general/mergesort.h sequence/../general/safe.h \
- sequence/../structure/fragments.h /usr/include/gsl/gsl_math.h \
- /usr/include/gsl/gsl_sys.h /usr/include/gsl/gsl_inline.h \
- /usr/include/gsl/gsl_machine.h \
+ sequence/../structure/fragments.h /usr/local/include/gsl/gsl_math.h \
+ /usr/local/include/gsl/gsl_sys.h /usr/local/include/gsl/gsl_inline.h \
+ /usr/local/include/gsl/gsl_machine.h \
  /usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h \
- /usr/include/gsl/gsl_precision.h /usr/include/gsl/gsl_types.h \
- /usr/include/gsl/gsl_nan.h /usr/include/gsl/gsl_pow_int.h \
- /usr/include/gsl/gsl_minmax.h sequence/../structure/pdb_structure.h \
- sequence/../structure/quatRMSD.h sequence/../structure/vec2mat.h \
+ /usr/local/include/gsl/gsl_precision.h \
+ /usr/local/include/gsl/gsl_types.h /usr/local/include/gsl/gsl_nan.h \
+ /usr/local/include/gsl/gsl_pow_int.h /usr/local/include/gsl/gsl_minmax.h \
+ sequence/../structure/pdb_structure.h sequence/../structure/quatRMSD.h \
+ sequence/../structure/vec2mat.h \
  sequence/../structure/../general/matrix.h \
  sequence/../structure/../general/safe.h \
  sequence/../structure/../general/safe.h \
  sequence/../structure/pdb_structure.h \
  sequence/../structure/transform_segment.h sequence/../structure/kabsch.h \
- /usr/include/gsl/gsl_vector_double.h /usr/include/gsl/gsl_errno.h \
- /usr/include/gsl/gsl_check_range.h /usr/include/gsl/gsl_block_double.h \
- /usr/include/gsl/gsl_matrix_double.h sequence/sequence.h \
+ /usr/local/include/gsl/gsl_vector_double.h \
+ /usr/local/include/gsl/gsl_errno.h \
+ /usr/local/include/gsl/gsl_check_range.h \
+ /usr/local/include/gsl/gsl_block_double.h \
+ /usr/local/include/gsl/gsl_matrix_double.h sequence/sequence.h \
  statistics/code.h statistics/../general/mergesort.h \
  statistics/probability.h statistics/../general/matrix.h \
  statistics/probability.h structure/fragments.h \
  structure/fragment_colour.h structure/../general/safe.h \
- structure/pdb_structure.h structure/transform_segment.h
+ structure/pdb_structure.h structure/transform_segment.h \
+ legacyheaders/macros.h legacyheaders/typedefs.h
 
 /usr/include/stdc-predef.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/statutil.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/trxio.h:
 
-/usr/include/stdio.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/typedefs.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/features.h:
 
@@ -207,33 +193,13 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
-
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/usr/include/libio.h:
-
-/usr/include/_G_config.h:
-
-/usr/include/wchar.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/typedefs.h:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
 /usr/include/time.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
 
 /usr/include/endian.h:
 
@@ -257,7 +223,7 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/sysstuff.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/sysstuff.h:
 
 /usr/include/stdlib.h:
 
@@ -272,6 +238,24 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
 /usr/include/errno.h:
 
@@ -301,18 +285,6 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
 
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
-/usr/include/unistd.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/getopt.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:
@@ -329,151 +301,7 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
 
 /usr/include/xlocale.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/simple.h:
-
-../config.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/enums.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/block.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/idef.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/simple.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/symtab.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/idef.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/atoms.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/trx.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/atoms.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../molfile_plugin.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../vmdplugin.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../vmdio.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../molfile_plugin.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../types/simple.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/topology.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/block.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/symtab.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/energy.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/inputrec.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../sysstuff.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/ishift.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/graph.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nrnb.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nblist.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nsgrid.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/commrec.h:
-
-/usr/lib/openmpi/include/mpi.h:
-
-/usr/lib/openmpi/include/mpi_portable_platform.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/forcerec.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/ns.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nsgrid.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nblist.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/genborn.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/qmmmrec.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/fcdata.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/commrec.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/mdatom.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/pbc.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/ifunc.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/../typedefs.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/filenm.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/group.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/state.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/shellfc.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/constr.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/matrix.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/oenv.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/globsig.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/nlistheuristics.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/types/iteratedconstraints.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/filenm.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/futil.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/readinp.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/warninp.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/wman.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/pdbio.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/symtab.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/atomprop.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/index.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/oenv.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/gmxfio.h:
-
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/xdrf.h:
-
-/usr/include/rpc/rpc.h:
-
-/usr/include/rpc/types.h:
-
-/usr/include/x86_64-linux-gnu/sys/time.h:
-
-/usr/include/x86_64-linux-gnu/sys/param.h:
-
-/usr/include/x86_64-linux-gnu/bits/param.h:
-
-/usr/include/linux/param.h:
-
-/usr/include/x86_64-linux-gnu/asm/param.h:
-
-/usr/include/asm-generic/param.h:
-
-/usr/include/netinet/in.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/simple.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h:
 
@@ -481,37 +309,111 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/include/x86_64-linux-gnu/sys/socket.h:
+/usr/include/inttypes.h:
 
-/usr/include/x86_64-linux-gnu/sys/uio.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/enums.h:
 
-/usr/include/x86_64-linux-gnu/bits/uio.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/block.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/idef.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket_type.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/simple.h:
 
-/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/symtab.h:
 
-/usr/include/x86_64-linux-gnu/asm/socket.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/idef.h:
 
-/usr/include/asm-generic/socket.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/atoms.h:
 
-/usr/include/x86_64-linux-gnu/asm/sockios.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/../fileio/trx.h:
 
-/usr/include/asm-generic/sockios.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/../fileio/../legacyheaders/types/atoms.h:
 
-/usr/include/x86_64-linux-gnu/bits/socket2.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/topology.h:
 
-/usr/include/x86_64-linux-gnu/bits/in.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/atoms.h:
 
-/usr/include/rpc/xdr.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/block.h:
 
-/usr/include/rpc/auth.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/symtab.h:
 
-/usr/include/rpc/clnt.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/energy.h:
 
-/usr/include/x86_64-linux-gnu/sys/un.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/inputrec.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/enums.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/../sysstuff.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/../../swap/enums.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/ishift.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/graph.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nrnb.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nblist.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nbnxn_pairlist.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nblist.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nsgrid.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/forcerec.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/ns.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nsgrid.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/genborn.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/qmmmrec.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nb_verlet.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nbnxn_pairlist.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/nbnxn_cuda_types_ext.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/interaction_const.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/hw_info.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/../gmx_cpuid.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/fcdata.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/mdatom.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/pbc.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/ifunc.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/mdatom.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/fcdata.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/graph.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/pbc.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/group.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/state.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/shellfc.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/constr.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/matrix.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/types/oenv.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/filenm.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/readinp.h:
 
 /usr/include/string.h:
 
@@ -521,25 +423,41 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
 
 /usr/include/x86_64-linux-gnu/bits/string3.h:
 
-/usr/include/rpc/rpc_msg.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/typedefs.h:
 
-/usr/include/rpc/auth_unix.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/warninp.h:
 
-/usr/include/rpc/auth_des.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/pdbio.h:
 
-/usr/include/rpc/svc.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/sysstuff.h:
 
-/usr/include/rpc/svc_auth.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/symtab.h:
 
-/usr/include/rpc/netdb.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/atomprop.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/typedefs.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/index.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/smalloc.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../legacyheaders/oenv.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/vec.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/gmxfio.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/maths.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/futil.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../utility/gmx_header_config.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/../utility/gmx_header_config_gen.h:
+
+legacyheaders/typedefs.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/utility/smalloc.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/vec.h:
+
+../config.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/types/simple.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/../math/utilities.h:
 
 /usr/include/math.h:
 
@@ -559,31 +477,43 @@ g_sa_encode.o: g_sa_encode.c /usr/include/stdc-predef.h \
 
 /usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/macros.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/../math/../legacyheaders/types/simple.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/gmx_fatal.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/typedefs.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/mpelogging.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/sysstuff.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/physics.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/gmx_fatal.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/copyrite.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/physics.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/pdbio.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/copyrite.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/tpxio.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/pdbio.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/xvgr.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/tpxio.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/viewit.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/xvgr.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/matio.h:
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/viewit.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/legacyheaders/../fileio/filenm.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/fileio/matio.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/commandline/pargs.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/commandline/../legacyheaders/types/simple.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/commandline/../legacyheaders/oenv.h:
+
+/mb/apps/gromacs-5.0.2/include/gromacs/commandline/../fileio/filenm.h:
+
+includeheaders/types/simple.h:
 
 general/safe.h:
 
-/home/jkleinj/apps/gromacs-4.5.5/include/gromacs/assert.h:
-
-/usr/include/ctype.h:
+/usr/include/assert.h:
 
 sequence/encode.h:
 
@@ -595,25 +525,25 @@ sequence/../general/safe.h:
 
 sequence/../structure/fragments.h:
 
-/usr/include/gsl/gsl_math.h:
+/usr/local/include/gsl/gsl_math.h:
 
-/usr/include/gsl/gsl_sys.h:
+/usr/local/include/gsl/gsl_sys.h:
 
-/usr/include/gsl/gsl_inline.h:
+/usr/local/include/gsl/gsl_inline.h:
 
-/usr/include/gsl/gsl_machine.h:
+/usr/local/include/gsl/gsl_machine.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h:
 
-/usr/include/gsl/gsl_precision.h:
+/usr/local/include/gsl/gsl_precision.h:
 
-/usr/include/gsl/gsl_types.h:
+/usr/local/include/gsl/gsl_types.h:
 
-/usr/include/gsl/gsl_nan.h:
+/usr/local/include/gsl/gsl_nan.h:
 
-/usr/include/gsl/gsl_pow_int.h:
+/usr/local/include/gsl/gsl_pow_int.h:
 
-/usr/include/gsl/gsl_minmax.h:
+/usr/local/include/gsl/gsl_minmax.h:
 
 sequence/../structure/pdb_structure.h:
 
@@ -633,15 +563,15 @@ sequence/../structure/transform_segment.h:
 
 sequence/../structure/kabsch.h:
 
-/usr/include/gsl/gsl_vector_double.h:
+/usr/local/include/gsl/gsl_vector_double.h:
 
-/usr/include/gsl/gsl_errno.h:
+/usr/local/include/gsl/gsl_errno.h:
 
-/usr/include/gsl/gsl_check_range.h:
+/usr/local/include/gsl/gsl_check_range.h:
 
-/usr/include/gsl/gsl_block_double.h:
+/usr/local/include/gsl/gsl_block_double.h:
 
-/usr/include/gsl/gsl_matrix_double.h:
+/usr/local/include/gsl/gsl_matrix_double.h:
 
 sequence/sequence.h:
 
@@ -664,3 +594,7 @@ structure/../general/safe.h:
 structure/pdb_structure.h:
 
 structure/transform_segment.h:
+
+legacyheaders/macros.h:
+
+legacyheaders/typedefs.h:

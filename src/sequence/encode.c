@@ -21,8 +21,6 @@
 
 #include "encode.h"
 
-extern float CADistCutoff;
-
 /*____________________________________________________________________________*/
 /** compare reconstructed structures */
 int RecStrCmp(ReconStructure *recStrA, ReconStructure *recStrB) {
@@ -195,7 +193,6 @@ void localfit_encode(ReconStructure *recStr, Vec *refcoord,
     /** structure superpositioning parameters*/
     unsigned int shift = 1; /* peptide shift */
     int bestFragment = -1; /* stralphabet fragment with lowest rmsd value */
-	float CADist = 0; /* C-alpha - C-alpha distance */
 
     /*________________________________________________________________________*/
     /** symmetry operators for structural superpositioning */
@@ -213,26 +210,17 @@ void localfit_encode(ReconStructure *recStr, Vec *refcoord,
     /** scan fragments of length 'lFragment' of PDB structure */
     for (i = 0; i <= recStr->natom - fragment_set->lFragment; i += shift)
     {
-        CADist = coord_rmsd(&(refcoord[i+2]), &(refcoord[i+3]));
-        if (CADist <= CADistCutoff){
-			bestFragment = get_best_fragment(&refcoord[i], fragment_set,
+        bestFragment = get_best_fragment(&refcoord[i], fragment_set,
                                          fragment_str, &rmsd);
 
-			/** translate best fragment to stralphabet character */
-			recStr->encodedString[i] = fragment_set->codeOrder[bestFragment];
+        /** translate best fragment to stralphabet character */
+        recStr->encodedString[i] = fragment_set->codeOrder[bestFragment];
 
-			/** update local RMSD array */
-			localfit_rmsd_array[i] = rmsd;
+        /** update local RMSD array */
+        localfit_rmsd_array[i] = rmsd;
 
-			/** add local RMSD to sum */
-			rmsdSum += rmsd;
-		} else {
-			/*fprintf(stderr, "Chain break: Not encoding positions %d, %d, %d\n", i+1, i+2, i+3);*/ 
-			recStr->encodedString[i] = ' ';
-			recStr->encodedString[i+1] = ' ';
-			recStr->encodedString[i+2] = ' ';
-			i += 2;
-		}
+        /** add local RMSD to sum */
+        rmsdSum += rmsd;
     }
 
     /*________________________________________________________________________*/

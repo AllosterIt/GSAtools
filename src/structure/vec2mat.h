@@ -19,7 +19,7 @@
  *
  */
 
-#if !defined VEC2MAT_H
+#ifndef VEC2MAT_H
 #define VEC2MAT_H
 
 #include "pdb_structure.h"

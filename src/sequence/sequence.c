@@ -22,17 +22,6 @@
 #include "sequence.h"
 
 /*____________________________________________________________________________*/
-/* global variables */
-#ifdef MPI
-#include <mpi.h>
-int my_rank; /* rank of 'this' node */
-int nodes; /* number of nodes */
-#else
-int my_rank = 0;
-int nodes = 1;
-#endif
-
-/*____________________________________________________________________________*/
 /** read input sequences from file */
 void read_inputFileEnsemble(FILE *inputFile, SeqSet *inputSequenceSet) {
 
@@ -93,16 +82,12 @@ void read_inputFileEnsemble(FILE *inputFile, SeqSet *inputSequenceSet) {
         /* allocate more memory for sequences if needed */
 		if (inputSequenceSet->nSequences == allocated_seq) {
 			allocated_seq += 64;
-			if (allocated_seq % 1024 == 0) {
-				if (my_rank == 0) fprintf(stdout, "allocated %d sequences\r", allocated_seq);
-			}
 			inputSequenceSet->sequence = safe_realloc(inputSequenceSet->sequence, allocated_seq * sizeof(Seq));
 		}
     }
-	if (my_rank == 0) {
-		fprintf(stdout, "number of input sequences: %d\n", inputSequenceSet->nSequences);
-		fflush(stdout);
-	}
+#ifdef DEBUG
+	fprintf(stderr, "number of input sequences: %d\n", inputSequenceSet->nSequences);
+#endif
 }
 
 /*____________________________________________________________________________*/

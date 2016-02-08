@@ -93,17 +93,16 @@ void free_probability_matrix(ProbMatrix *probMat) {
 
 /*____________________________________________________________________________*/
 /** Mutual Information */
-__inline__ float mutual_information(ProbMatrix *probMat, Set *codeSet, Set *altCodeSet) {
+float mutual_information(ProbMatrix *probMat, Set *codeSet, Set *altCodeSet) {
 
     int i,j; /* index */
     float I = 0.0;
-	double log2 = log(2);
 
     for(i = 0; i < codeSet->nElements; ++i)
         for(j = 0; j < altCodeSet->nElements; ++j)
             if (probMat->prob[i][j] != 0)
                 I += probMat->prob[i][j] * log( (probMat->prob[i][j]) /
-                                                (codeSet->element[i].prob * altCodeSet->element[j].prob) ) / log2;
+                                                (codeSet->element[i].prob * altCodeSet->element[j].prob) ) / log(2);
 
     return(I > 0 ? I : 0);
 }
