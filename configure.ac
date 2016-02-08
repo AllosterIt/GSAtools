@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.59])
-AC_INIT(GSATools, 4.5.x-1.00, [alessandro.pandini@gmail.com])
+AC_INIT(GSATools, 1.0.0, [alessandro.pandini@gmail.com])
 AC_CONFIG_SRCDIR([src/g_sa_encode.c])
 AM_INIT_AUTOMAKE([foreign -Wall -Werror])
 
@@ -52,14 +52,14 @@ AC_CHECK_FUNCS([strcasecmp])
 AC_ARG_VAR(GMXDIR, [path to gromacs installation])
 AC_MSG_CHECKING([whether GMXDIR has been set])
 if test -z "$GMXDIR" ; then
-    GMXDIR="/usr/local/gromacs"
+    GMXDIR="$GMXDIR"
 fi
 if test -d "$GMXDIR" ; then
 	AC_MSG_RESULT([yes])
 else
     AC_MSG_RESULT([no])
     AC_MSG_ERROR( [  GMXDIR is undefined but required for compilation.
-                     Set GMXDIR according to your Gromacs 4.5.x path.
+                     Set GMXDIR according to your Gromacs path.
                      Read the INSTALL file for details.] )
 fi
 
