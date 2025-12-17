@@ -1,8 +1,9 @@
 
+===> This project has been superseeded by the AlloHubPy project! <==
+===> The GSATools repository is kept to maintain code referenced in earlier publications. <===
 
-
-Legacy GSATools project
------------------------
+GSATools project (legacy)
+-------------------------
 GSAtools is a set of programs that translate ensembles of protein conformations
 into alignments of structural strings using a Structural Alphabet (SA) and
 perform a wide range of statistical analyses. 
